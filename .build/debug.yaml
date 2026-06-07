@@ -1,0 +1,212 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "NotebookApp-x86_64-unknown-linux-gnu-debug.exe": ["<NotebookApp-x86_64-unknown-linux-gnu-debug.exe>"]
+  "NotebookApp-x86_64-unknown-linux-gnu-debug.module": ["<NotebookApp-x86_64-unknown-linux-gnu-debug.module>"]
+  "NotebookAppPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module": ["<NotebookAppPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.module": ["<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.test": ["<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+  "NotebookCore-x86_64-unknown-linux-gnu-debug.module": ["<NotebookCore-x86_64-unknown-linux-gnu-debug.module>"]
+  "NotebookCoreTests-x86_64-unknown-linux-gnu-debug.module": ["<NotebookCoreTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<NotebookApp-x86_64-unknown-linux-gnu-debug.exe>","<NotebookApp-x86_64-unknown-linux-gnu-debug.module>","<NotebookCore-x86_64-unknown-linux-gnu-debug.module>"]
+  "test": ["<NotebookApp-x86_64-unknown-linux-gnu-debug.exe>","<NotebookApp-x86_64-unknown-linux-gnu-debug.module>","<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.test>","<NotebookCore-x86_64-unknown-linux-gnu-debug.module>","<NotebookCoreTests-x86_64-unknown-linux-gnu-debug.module>"]
+default: "main"
+nodes:
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookApp/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/tmp/workspace/kizzlah/notebookapp/Tests/NotebookCoreTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/NotebookApp.swiftmodule.o":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookApp.swiftmodule"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/NotebookApp.swiftmodule.o"]
+    description: "Wrapping AST for NotebookApp for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookApp.swiftmodule","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/NotebookApp.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookApp/main.swift"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/sources"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/sources"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/NotebookApp.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.product/Objects.LinkFileList"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookAppPackageDiscoveredTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookAppPackageDiscoveredTests.swiftmodule.o"]
+    description: "Wrapping AST for NotebookAppPackageDiscoveredTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookAppPackageDiscoveredTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/NotebookCoreTests.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/sources"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/sources"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/all-discovered-tests.swift":
+    tool: test-discovery-tool
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swift.o"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/NotebookCoreTests.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/all-discovered-tests.swift"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/NotebookAppPackageTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageTests.swiftmodule"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/NotebookAppPackageTests.swiftmodule.o"]
+    description: "Wrapping AST for NotebookAppPackageTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageTests.swiftmodule","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/NotebookAppPackageTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.derived/runner.swift"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/sources"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/sources"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.derived/runner.swift"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookAppPackageDiscoveredTests.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/NotebookAppPackageTests.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/runner.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swiftmodule.o"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.product/Objects.LinkFileList"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o"]
+    description: "Wrapping AST for NotebookCore for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/AppleAIService.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/AutosaveDebouncer.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/Models.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/NotebookEngine.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/Persistence.swift"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/sources"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/sources"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swiftmodule.o"]
+    description: "Wrapping AST for NotebookCoreTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/tmp/workspace/kizzlah/notebookapp/Tests/NotebookCoreTests/NotebookCoreTests.swift"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/sources"]
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/sources"
+
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/usr/share/swift/usr/bin/swiftc"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+
+  "<NotebookApp-x86_64-unknown-linux-gnu-debug.exe>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp"]
+    outputs: ["<NotebookApp-x86_64-unknown-linux-gnu-debug.exe>"]
+
+  "<NotebookApp-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookApp.swiftmodule"]
+    outputs: ["<NotebookApp-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<NotebookAppPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule"]
+    outputs: ["<NotebookAppPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/runner.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageTests.swiftmodule"]
+    outputs: ["<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.test>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.xctest"]
+    outputs: ["<NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+
+  "<NotebookCore-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule"]
+    outputs: ["<NotebookCore-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<NotebookCoreTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule"]
+    outputs: ["<NotebookCoreTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "C.NotebookApp-x86_64-unknown-linux-gnu-debug.exe":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/NotebookApp.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.product/Objects.LinkFileList"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/NotebookApp"
+    args: ["/usr/share/swift/usr/bin/swiftc","-L","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp","-module-name","NotebookApp","-emit-executable","-Xlinker","--defsym","-Xlinker","main=NotebookApp_main","-Xlinker","-rpath=$ORIGIN","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
+
+  "C.NotebookApp-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/Sources/NotebookApp/main.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/sources"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookApp.swiftmodule"]
+    description: "Compiling Swift Module 'NotebookApp' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","NotebookApp","-emit-dependencies","-emit-module","-emit-module-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookApp.swiftmodule","-output-file-map","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/output-file-map.json","-incremental","-c","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/sources","-I","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j2","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","NotebookApp_main","-parse-as-library","-color-diagnostics","-swift-version","6","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","notebookapp","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.NotebookAppPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/NotebookCoreTests.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/all-discovered-tests.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/sources"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule"]
+    description: "Compiling Swift Module 'NotebookAppPackageDiscoveredTests' (2 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","NotebookAppPackageDiscoveredTests","-emit-dependencies","-emit-module","-emit-module-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule","-output-file-map","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/sources","-I","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j2","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/include/NotebookAppPackageDiscoveredTests-Swift.h","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","notebookapp","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.derived/runner.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageDiscoveredTests.swiftmodule","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/sources"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/runner.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'NotebookAppPackageTests' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","NotebookAppPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookAppPackageTests.swiftmodule","-output-file-map","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/sources","-I","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j2","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/include/NotebookAppPackageTests-Swift.h","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","notebookapp","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.NotebookAppPackageTests-x86_64-unknown-linux-gnu-debug.test":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookAppPackageDiscoveredTests.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/NotebookAppPackageTests.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.build/runner.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookCore.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swiftmodule.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.xctest"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.xctest"
+    args: ["/usr/share/swift/usr/bin/swiftc","-L","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug","-o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.xctest","-module-name","NotebookAppPackageTests","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageTests.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
+
+  "C.NotebookCore-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/AppleAIService.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/AutosaveDebouncer.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/Models.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/NotebookEngine.swift","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/Persistence.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/sources"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule"]
+    description: "Compiling Swift Module 'NotebookCore' (5 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","NotebookCore","-emit-dependencies","-emit-module","-emit-module-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule","-output-file-map","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/output-file-map.json","-parse-as-library","-incremental","-c","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/sources","-I","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j2","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/include/NotebookCore-Swift.h","-color-diagnostics","-swift-version","6","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","notebookapp","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.NotebookCoreTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/Tests/NotebookCoreTests/NotebookCoreTests.swift","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCore.swiftmodule","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/sources"]
+    outputs: ["/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swift.o","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule"]
+    description: "Compiling Swift Module 'NotebookCoreTests' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","NotebookCoreTests","-emit-dependencies","-emit-module","-emit-module-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules/NotebookCoreTests.swiftmodule","-output-file-map","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/sources","-I","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j2","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","6","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","notebookapp","-Xcc","-fno-omit-frame-pointer"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/tmp/workspace/kizzlah/notebookapp/Sources/NotebookApp/","/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/","/tmp/workspace/kizzlah/notebookapp/Tests/NotebookCoreTests/","/tmp/workspace/kizzlah/notebookapp/Package.swift","/tmp/workspace/kizzlah/notebookapp/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

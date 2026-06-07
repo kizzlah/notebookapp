@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/primary.swiftdeps"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/NotebookCoreTests.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/NotebookCoreTests.dia"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.derived/all-discovered-tests.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookAppPackageDiscoveredTests.build/all-discovered-tests.dia"
+  }
+}

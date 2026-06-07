@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/primary.swiftdeps"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookApp/main.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookApp.build/main.dia"
+  }
+}
