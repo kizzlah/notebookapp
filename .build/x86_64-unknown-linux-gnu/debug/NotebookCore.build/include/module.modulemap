@@ -1,0 +1,3 @@
+module NotebookCore {
+    header "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/include/NotebookCore-Swift.h"
+}

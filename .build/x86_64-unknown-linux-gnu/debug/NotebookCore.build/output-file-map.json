@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/primary.swiftdeps"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/AppleAIService.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AppleAIService.dia"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/AutosaveDebouncer.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/AutosaveDebouncer.dia"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/Models.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Models.dia"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/NotebookEngine.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/NotebookEngine.dia"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Sources/NotebookCore/Persistence.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCore.build/Persistence.dia"
+  }
+}

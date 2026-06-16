@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/primary.swiftdeps"
+  },
+  "/tmp/workspace/kizzlah/notebookapp/Tests/NotebookCoreTests/NotebookCoreTests.swift": {
+    "dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.d",
+    "object": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swift.o",
+    "swiftmodule": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests~partial.swiftmodule",
+    "swift-dependencies": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.swiftdeps",
+    "diagnostics": "/tmp/workspace/kizzlah/notebookapp/.build/x86_64-unknown-linux-gnu/debug/NotebookCoreTests.build/NotebookCoreTests.dia"
+  }
+}
